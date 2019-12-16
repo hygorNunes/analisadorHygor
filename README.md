@@ -1,8 +1,8 @@
-# Definição da implementação do Analisador Léxico
+﻿# Definição da implementação do Analisador Léxico
 
 	Introdução
 
-  	A função de um analisador léxico consiste em ler os caracteres do programa-fonte e produzir uma seqüência de componentes léxicos ( tokens ) que serão utilizados pelo analisador sintático e/ou identificar erros léxicos na entrada. Além de sua função básica, o analisador léxico em geral está encarregado de fazer algumas tarefas secundárias como a eliminação de comentários, espaços em branco e tabulações. Outra função associada ao analisador léxico é o controle das linhas onde são encontrados erros e avisos.
+  	A função de um analisador léxico consiste em ler os caracteres do programa-fonte e produzir uma seqüência de componentes léxicos ( tokens ) que serão utilizados pelo analisador sintático e/ou identificar erros léxicos na entrada. 
 	
 	Implementação 
 	
@@ -11,8 +11,8 @@
     	1. principal.ide
     	2. buffer.h
     	3. lexico.h
-		4. token.h
-		5. principal.cpp
+	4. token.h
+	5. principal.cpp
 
 	1. Principal.ide
 
@@ -33,7 +33,7 @@
 
 	3. Lexico.h
 
-	Nesse arquivo é onde esta a linguagem  TINY que contem apenas a implementação do código em base de geração de autômatos e a função FalhouAutomatos, caso haja a necessidade de uma troca de linguagem ao alguma alteração na própria linguagem, a modificação será feita apenas nesse arquivo não precisando alterar o restante.
+	Nesse arquivo é onde esta a linguagem  MLN que contem apenas a implementação do código em base de geração de autômatos e a função FalhouAutomatos, caso haja a necessidade de uma troca de linguagem ao alguma alteração na própria linguagem, a modificação será feita apenas nesse arquivo não precisando alterar o restante.
 	
 	3.1. int FalhouAutomatos (int &partida)
   	
@@ -43,7 +43,7 @@
  
 	3.2. token ProximoToken ( )
   
-	A verificação da linguagem TINY foi feita através da implementação do código em base de geração de autômatos, no qual será informado cada caractere com a função ProximoCaracter( ) e verificado se ele encontra-se na linguagem senão, será tratado como erro pelo Analisador Léxico, logo abaixo esta descrita o autômato infinito determinístico utilizado para a verificação:
+	A verificação da linguagem MLN foi feita através da implementação do código em base de geração de autômatos, no qual será informado cada caractere com a função ProximoCaracter( ) e verificado se ele encontra-se na linguagem senão, será tratado como erro pelo Analisador Léxico, logo abaixo esta descrita o autômato infinito determinístico utilizado para a verificação:
 
 	4. Léxico.h
 
@@ -57,7 +57,7 @@
 
 	No arquivo contem o corpo principal, estão sendo chamados os procedimentos arquivo("Nome_Arquivo") e RetornaToken, necessário para a execução do Analisador Léxico.
 
-	5.1. arquivo("token.t")
+	5.1. arquivo("ArquivoFonte1.mln")
 
 	Chama o procedimento que abre o arquivo e armazena todo o seu conteúdo em um vetor. Para identificar o arquivo, basta apenas por o endereço com o nome do arquivo entre aspa dupla dentro do parentes após a palavra arquivo.
 
