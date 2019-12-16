@@ -1,41 +1,3 @@
-/*------------------------------------------------------------------------------
-                                "buffer.h"
-                                ----------
-			- Introdução.:
-         --------------
-           No arquivo "buffer.h" contem os  procedimentos de controle
-	      e  armazenamento, tambem as  variaveis que serão utilizadas.
-         Para que o Analizador Léxico possa varrer todo o  arquivo  e
-         retornar os tokens encontrados...
-
-         - void arquivo.:
-         ----------------
-           Tem  a   finalidade  de  abrir  um  arquivo  para  leitura
-         e  armazenar  todo  o  conteúdo  do  arquivo  em  um vetor e
-         finalizando com '\0'.
-
-         - char ProximoCaracter.:
-         ------------------------
-           Tem  a  finalidade  de fazer a leitura do vetor e retornar o
-         próximo caracter armazenado no vetor.
-
-         - typedef struct token.:
-         ------------------------
-           É criado um registro do tipo token, no qual irá armazenar as
-         informasões dos tokens encontrados no arquivo como:
-           	- Classe  .: Para que classe o token pertence.
-            - Valor   .: Lexema encontrado.
-            - PosicaoL.: Em que linha foi encontrado.
-
-
-         - Obs.:  O  vetor  está  sendo  alocado  dinamicamente com o
-         			tamanho do arquivo, para que não haja desperdiço de
-              		espaço na memória.
-------------------------------------------------------------------------------*/
-
-
-
-/*---------------------Declaração de bibliotecas------------------------------*/
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>
@@ -43,12 +5,8 @@
 #include <ctype.h>
 
 using namespace std;
-/*----------------------------------------------------------------------------*/
 
-
-
-/*---------------------------Definindo tipo-----------------------------------*/
-	typedef struct token	{
+typedef struct token	{
                    			int classe;//Classe do token
    					 			char valor[100];//Lexema
                    			int posicaoL;//Linha do lexema
@@ -85,7 +43,7 @@ char arquivo(char* nome_arquivo)
       --------------------------------------------*/
       if((arquivo = fopen(nome_arquivo,"r")) == NULL){
           cout << ":.Erro na Abertura do Arquivo.:" << endl;
-          cout << "Verifique se o endereco do arquivo foi degitado corretamente" << endl;
+          cout << "Verifique se o endereco do arquivo foi digitado corretamente" << endl;
       }
 
       
