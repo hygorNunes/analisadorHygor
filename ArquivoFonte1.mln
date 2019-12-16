@@ -1,0 +1,23 @@
+﻿num: val, i, resultado
+
+resultado = 0
+
+print "Digite um número: "
+read val
+
+for i = 2 to (val / 2) step 1
+{
+   if val % i = 0 {
+      resultado = resultado + 1
+      break
+   }
+}
+
+if resultado = 0
+{
+   print "O" + val + " é um número primo"
+}
+else
+{
+   print "O" + val + " NÃO é um número primo"
+}
