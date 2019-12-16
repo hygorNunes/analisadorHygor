@@ -1,0 +1,29 @@
+num a, b, c, delta, x1, x1f, x2, x2f, Xv, Yv
+
+print "CALCULO DE EQUACAO DO SEGUNDO GRAU"
+print "Informe o valor de A: "
+read a
+print "Informe o valor de B: "
+read b
+print "Informe o valor de C: "
+read c
+
+delta = (b * b) - (4 * a * c)
+
+if (delta<0)
+{
+  print "Delta e igual a " + delta + "informado
+  print "Delta Negativo, impossivel calcular"
+}
+else
+{
+  print "Delta e igual a delta"
+  x1 = ((-B) + sqrt(delta))/(2*a)
+  x2 = ((-B) - sqrt(delta))/(2*a)
+  print ("O " + x1 + " e o " + x2 );
+  Xv = -b \ (2*a)
+  Yv = -(delta) \ (4*a)
+  print "O " + Xv + " e o " + Yv );
+}
+
+printf "FIM")
